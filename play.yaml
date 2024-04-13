@@ -1,5 +1,5 @@
 ---
-- hosts: slave1
+- hosts: all
   become: yes
   name: Installing apache2 on slave1
   tasks:
@@ -8,11 +8,3 @@
         update_cache: yes
         name: apache2 
         state: latest
-- hosts: slave2
-  become: yes
-  name: Installing nginx on slave2
-  tasks:
-  - name: installing nginx
-    apt: 
-      name=nginx 
-      state=latest
