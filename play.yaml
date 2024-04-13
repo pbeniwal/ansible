@@ -1,10 +1,12 @@
 ---
-- hosts: all
+- hosts: localhost
   become: yes
-  name: Installing apache2 on slave1
+  name: Installing apache2 on localhost
   tasks:
   - name: Install apache2
     apt:  
         update_cache: yes
         name: apache2 
         state: latest
+  - name: Running a script
+    script: apache2_script.sh

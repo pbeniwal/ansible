@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "hello world from apache2" > /var/www/html/index.html
+echo "hello from Prashant" > /var/www/html/index.html
